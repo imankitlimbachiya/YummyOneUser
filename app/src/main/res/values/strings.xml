@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">YummyOne</string>
+    <string name="app_name">YummyOneUser</string>
+
+    <string name="facebook_app_id">1458355307702807</string>
+    <string name="fb_login_protocol_scheme">fb1458355307702807</string>
+
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">Fw4cXXXXXXXXXXX</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">Pnr7XXXXXXXXXXX</string>
+
+    // Splash Screen
+    <string name="splash_logo">Splash Logo</string>
+    <string name="splash_logo_gees">Splash Logo Gees</string>
+    <string name="splash_text">Celebrate the flavours of life</string>
+
+    // Main Screen
+    <string name="hello">Hello!</string>
+    <string name="sign_in">Sign In</string>
+    <string name="explore">Explore</string>
+    <string name="new_here_returning">New here or\nReturning?</string>
+    <string name="want_to_explore">Want to explore?</string>
+    <string name="just_enter_mobile_handle_rest">Just enter your\nMobile number\nAnd we will\nHandle the rest.</string>
+    <string name="continue_guest_see_offer">Continue as guest\nto see what the app\nHas to offer.</string>
 </resources>

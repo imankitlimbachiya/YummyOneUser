@@ -4,10 +4,10 @@ plugins {
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "yummy.one"
+        applicationId "com.app.yummyone"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
@@ -29,17 +29,34 @@ android {
 }
 
 dependencies {
-    // Facebook Shimmer SDK
-    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    // Twitter SDK
+    implementation 'com.twitter.sdk.android:twitter:3.1.1'
+    implementation 'com.twitter.sdk.android:twitter-core:3.1.1'
+
+    // Country Code Picker SDK
+    implementation 'com.hbb20:ccp:2.3.5'
+
+    // Glide SDK
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    // Google Login SDK
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+
+    // Facebook SDK
+    implementation 'com.facebook.android:facebook-login:5.15.3'
 
     // CircleImageView SDK
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
-    // OtpView SDK
-    implementation 'com.github.aabhasr1:OtpView:1.1.2'
+    // Lottie SDK
+    implementation 'com.airbnb.android:lottie:3.7.0'
+
+    // Intuit SDK
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

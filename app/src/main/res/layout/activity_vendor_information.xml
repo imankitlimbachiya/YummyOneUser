@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.VendorInformationActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:src="@drawable/profile_pic"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginLeft="@dimen/_20sdp"/>
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_153sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:background="@drawable/bg_btl_corner"
+        android:src="@drawable/ic_coupne"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_toolbar"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="@dimen/_56sdp">
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/img_bag"
+            android:src="@drawable/ic_search_text"/>
+
+        <ImageView
+            android:id="@+id/img_bag"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_bag_text"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_casionopark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_image"
+        android:text="Casino Park"
+        android:layout_marginLeft="@dimen/_18sdp"
+        android:textSize="25sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/txt_foodtype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_casionopark"
+        android:text="Indian   Italian   Chinese"
+        android:layout_marginLeft="@dimen/_18sdp"
+        android:textSize="12sp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/ll_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:weightSum="3"
+        android:layout_below="@+id/txt_foodtype"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txt_menu"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_28sdp"
+            android:textStyle="normal"
+            android:textSize="@dimen/_13sdp"
+            android:background="@drawable/bg_search_home"
+            android:backgroundTint="@color/Red"
+            android:textColor="@color/white"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:singleLine="true"
+            android:lineSpacingExtra="3sp"
+            android:gravity="center"
+            android:text="  Menu  " />
+
+        <TextView
+            android:id="@+id/txt_information"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_28sdp"
+            android:textStyle="normal"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:background="@drawable/bg_search_home"
+            android:backgroundTint="@color/VvDGrey"
+            android:textColor="@color/black"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:singleLine="true"
+            android:lineSpacingExtra="3sp"
+            android:gravity="center"
+            android:text="  Information  " />
+
+        <TextView
+            android:id="@+id/txt_rating"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_28sdp"
+            android:textStyle="normal"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/bg_search_home"
+            android:backgroundTint="@color/VvDGrey"
+            android:textColor="@color/black"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:lineSpacingExtra="3sp"
+            android:singleLine="true"
+            android:gravity="center"
+            android:text="  Rating  " />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_populer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/ll_list"
+        android:visibility="gone"
+        android:background="@drawable/bg_ttl_corner"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:background="@color/VlightDGrey"
+            android:paddingLeft="@dimen/_15sdp"
+            android:textColor="@color/LGrey"
+            android:text="Popular"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:background="@color/VlightDGrey">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:paddingRight="@dimen/_5sdp"
+                android:layout_toLeftOf="@+id/img_down"
+                android:textColor="@color/LGrey"
+                android:layout_centerVertical="true"
+                android:lineSpacingExtra="3sp"
+                android:text="4" />
+            <ImageView
+                android:id="@+id/img_down"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:src="@drawable/ccp_down_arrow"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ns_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/ll_populer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@drawable/bg_ttl_gradintcorner"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:src="@drawable/ic_burger"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="3sp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Green Salad" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/Grey"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="6sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Lassi, Custard Apple lassi,Pickle, butter and slated lassi" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_88sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:paddingLeft="@dimen/_15sdp"
+                android:background="@drawable/bg_round"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/Grey"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Size"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="2sp"
+                        android:text="Full" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_select"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_select"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/Red"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_toLeftOf="@+id/img_select"
+                        android:text="$ 250"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="2sp"
+                        android:text="Half" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_unselect"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_unselect"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_toLeftOf="@+id/img_unselect"
+                        android:text="$ 150"
+                        android:textColor="@color/Red"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_88sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:paddingLeft="@dimen/_15sdp"
+                android:background="@drawable/bg_round"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/Grey"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Extra"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="2sp"
+                        android:text="Add extra item 1" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_sequre"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_squre"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/Red"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_toLeftOf="@+id/img_sequre"
+                        android:text="$ 50"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="11sp"
+                        android:textColor="@color/black"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="2sp"
+                        android:text="Add extra item 2" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_sequre1"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_squre"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_toLeftOf="@+id/img_sequre1"
+                        android:text="$ 50"
+                        android:textColor="@color/Red"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="3sp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Special Instruction" />
+
+            <TextView
+                android:layout_width="@dimen/_277sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:textStyle="normal"
+                android:textSize="11sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_full_edit_border"
+                android:letterSpacing="0.01"
+                android:gravity="center"
+                android:lineSpacingExtra="2sp"
+                android:text="Add a note (extra sauce, no onions, etc.)" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_29sdp"
+                    android:layout_height="@dimen/_29sdp"
+                    android:src="@drawable/ic_minus_circle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:lineSpacingExtra="4sp"
+                    android:text="1" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_29sdp"
+                    android:layout_height="@dimen/_29sdp"
+                    android:src="@drawable/ic_plus_circle"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/_167sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:background="@drawable/bg_btn"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="2sp"
+                android:text="ADD" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ns_information"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/ll_list">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="18sp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/Grey"
+                android:lineSpacingExtra="4sp"
+                android:text="About Casino Park" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:textColor="@color/Grey"
+                android:lineSpacingExtra="4sp"
+                android:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et… See More " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="18sp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="4sp"
+                android:text="Cuisines: " />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="16sp"
+                    android:drawableLeft="@drawable/ic_dot"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:textColor="@color/Grey"
+                    android:lineSpacingExtra="2sp"
+                    android:text="Indian" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:drawableLeft="@drawable/ic_dot"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:textColor="@color/Grey"
+                    android:lineSpacingExtra="2sp"
+                    android:text="Italian" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="16sp"
+                    android:drawableLeft="@drawable/ic_dot"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:textColor="@color/Grey"
+                    android:lineSpacingExtra="2sp"
+                    android:text="Chinese" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:drawableLeft="@drawable/ic_dot"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:textColor="@color/Grey"
+                    android:lineSpacingExtra="2sp"
+                    android:text="South Indian" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="18sp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/Grey"
+                android:lineSpacingExtra="4sp"
+                android:text="Restaurant Vlogs " />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/_86sdp"
+                    android:layout_height="@dimen/_83sdp"
+                    android:src="@drawable/ic_burger"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="14sp"
+                        android:textColor="@color/Grey"
+                        android:lineSpacingExtra="3sp"
+                        android:text="Nancy Allen Created vlog on Pav bhaji named “Casino park famous Pav bhaji”" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:textColor="@color/LGrey"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="2sp"
+                        android:text="Dec 25, 2020 12:00 AM" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/_86sdp"
+                    android:layout_height="@dimen/_83sdp"
+                    android:src="@drawable/ic_burger"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="14sp"
+                        android:textColor="@color/Grey"
+                        android:lineSpacingExtra="3sp"
+                        android:text="Nancy Allen Created vlog on Pav bhaji named “Casino park famous Pav bhaji”" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:textColor="@color/LGrey"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="2sp"
+                        android:text="Dec 25, 2020 12:00 AM" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ns_rating"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/ll_list">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/Grey"
+            android:lineSpacingExtra="4sp"
+            android:text="Rating Insights" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/_20sdp"
+                    android:src="@drawable/profile_pic"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/LGrey"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center_horizontal"
+                    android:text="Taste"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/_20sdp"
+                    android:src="@drawable/profile_pic"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/LGrey"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center_horizontal"
+                    android:text="Quality"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/_20sdp"
+                    android:src="@drawable/profile_pic"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/LGrey"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center_horizontal"
+                    android:text="Quality"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/Grey"
+            android:lineSpacingExtra="4sp"
+            android:text="Reviews" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="13sp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="3sp"
+            android:gravity="center_horizontal"
+            android:text="Arun Sairam" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:textColor="@color/Grey"
+            android:lineSpacingExtra="4sp"
+            android:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="13sp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="3sp"
+            android:gravity="center_horizontal"
+            android:text="Rohan Girish" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:textColor="@color/Grey"
+            android:lineSpacingExtra="4sp"
+            android:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat… See More" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="13sp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="3sp"
+            android:gravity="center_horizontal"
+            android:text="Chethan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:textColor="@color/Grey"
+            android:lineSpacingExtra="4sp"
+            android:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et… See More" />
+
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -10,59 +9,93 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.4"
+        android:layout_weight="0.1"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imgLogoSplash"
-            android:layout_width="wrap_content"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="50dp"
             android:layout_above="@id/imgDotOne"
-            android:src="@drawable/logo_intro_slide_three" />
-
-        <ImageView
-            android:id="@+id/imgDotOne"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_margin="5dp"
-            android:src="@drawable/dot_intro_slide_three" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/searching_driver" />
+
+        <LinearLayout
+            android:id="@+id/imgDotOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/VvDGrey"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_dot" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:tint="@color/VvDGrey"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_dot" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_dot" />
+        </LinearLayout>
 
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.6"
+        android:layout_weight="0.5"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txtAllYourFavourites"
+            android:id="@+id/txtUnmatchedReliability"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="5dp"
-            android:layout_centerHorizontal="true"
             android:fontFamily="@font/roboto_medium"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="4sp"
             android:text="Unmatched Reliability"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textColor="#222222"
+            android:textSize="20sp"
+            android:textStyle="normal" />
 
         <TextView
-            android:id="@+id/txtAllYourFavouritesDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/txtAllYourFavourites"
-            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/roboto_light"
             android:gravity="center"
-            android:text="Experience peace of mind while we get one\nof our reliable drivers to deliver your yummy\nfood"
-            android:textColor="@color/grey"
-            android:textSize="14sp" />
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="5sp"
+            android:text="OExperience peace of mind while we get one\nof our reliable drivers to deliver your yummy\nFood"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:textStyle="normal" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>

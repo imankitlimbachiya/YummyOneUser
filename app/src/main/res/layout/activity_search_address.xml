@@ -1,151 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:focusableInTouchMode="true"
     tools:context=".Activity.SearchAddressActivity">
 
     <RelativeLayout
-        android:id="@+id/TitleLayout"
+        android:id="@+id/ll_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
 
-        <ImageView
-            android:id="@+id/imgBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_Back"
+            android:layout_width="@dimen/_40sdp"
+            android:padding="@dimen/_10sdp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:padding="10dp"
-            android:src="@drawable/back" />
+            android:src="@drawable/ic_left_arrow"/>
 
     </RelativeLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/TitleLayout">
-
+        android:layout_below="@+id/ll_toolbar">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/txtSearchAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:fontFamily="@font/roboto_bold"
-                android:text="Search address"
-                android:textColor="@color/black"
-                android:textSize="28sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
                 android:fontFamily="@font/roboto_regular"
-                android:text="Please enter your location to find\nrestaurants near you."
-                android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:textColor="#000000"
+                android:lineSpacingExtra="6sp"
+                android:text="Search address" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:textColor="#444444"
+                android:lineSpacingExtra="8sp"
+                android:text="Please enter your location to find restaurants \nnear you." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_medium"
-                android:text="LOCATION"
-                android:textColor="@color/black"
-                android:textSize="10sp" />
+                android:textStyle="normal"
+                android:textSize="10sp"
+                android:layout_marginTop="26dp"
+                android:textColor="#444444"
+                android:lineSpacingExtra="2sp"
+                android:text="LOCATION" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/line_bg_bottom">
+                android:layout_marginTop="13dp"
+                android:background="@drawable/bg_btn"
+                android:backgroundTint="#f2f2f2">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/search" />
-
-                <EditText
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="10dp"
-                    android:layout_toLeftOf="@id/imgClose"
-                    android:background="@color/transparent"
-                    android:fontFamily="@font/roboto_medium"
-                    android:hint="LOCATION"
-                    android:imeOptions="actionDone"
-                    android:inputType="text"
-                    android:paddingLeft="30dp"
-                    android:singleLine="true"
-                    android:text=""
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black"
-                    android:textCursorDrawable="@drawable/bg_cursor"
-                    android:textSize="14sp" />
+                    android:layout_toLeftOf="@+id/img_Cancle"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_search_icon"/>
+
+                    <EditText
+                        android:id="@+id/edt_Enter_Location"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textStyle="normal"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@null"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="#444444"
+                        android:textCursorDrawable="@color/Grey"
+                        android:textColorHint="@color/Grey"
+                        android:letterSpacing="0.01"
+                        android:lineSpacingExtra="3sp"
+                        android:hint="Enter the Location name" />
+
+                </LinearLayout>
 
                 <ImageView
-                    android:id="@+id/imgClose"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/img_Cancle"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/close_circle" />
-
+                    android:layout_marginRight="13dp"
+                    android:visibility="gone"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_cancle_round_icon"/>
             </RelativeLayout>
 
-            <RelativeLayout
+            <LinearLayout
+                android:id="@+id/ll_Current_Location"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="20dp">
-
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
                 <ImageView
-                    android:id="@+id/imgNavigation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/navigation" />
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:src="@drawable/ic_navigation_icon"/>
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_toLeftOf="@id/imgTurnOn"
-                    android:layout_toRightOf="@id/imgNavigation"
-                    android:fontFamily="@font/roboto_regular"
-                    android:gravity="center_vertical"
-                    android:singleLine="true"
-                    android:text="Current Location"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-
-                <ImageView
-                    android:id="@+id/imgTurnOn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/turn_on" />
+                    android:fontFamily="@font/roboto_regular"
+                    android:textStyle="normal"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="14dp"
+                    android:textColor="#444444"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Current Location" />
+            </LinearLayout>
 
-            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textStyle="normal"
+                android:textSize="10sp"
+                android:layout_marginTop="15dp"
+                android:textColor="#444444"
+                android:lineSpacingExtra="2sp"
+                android:text="HISTORY" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_time_gray"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textStyle="normal"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="14dp"
+                    android:textColor="#444444"
+                    android:lineSpacingExtra="3sp"
+                    android:text="RMS layout" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_time_gray"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textStyle="normal"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="14dp"
+                    android:textColor="#444444"
+                    android:lineSpacingExtra="3sp"
+                    android:text="170 Ross St, Glebe" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_time_gray"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textStyle="normal"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="14dp"
+                    android:textColor="#444444"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Society Road" />
+            </LinearLayout>
 
         </LinearLayout>
-
     </androidx.core.widget.NestedScrollView>
+
+
 
 </RelativeLayout>

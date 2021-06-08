@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_12sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/rl_image"
+                android:layout_width="@dimen/_81sdp"
+                android:layout_height="@dimen/_81sdp">
+
+                <ImageView
+                    android:id="@+id/img_item"
+                    android:layout_width="@dimen/_81sdp"
+                    android:layout_height="@dimen/_81sdp"
+                    android:src="@drawable/ic_burger"
+                    android:background="@drawable/bg_round"/>
+
+                <TextView
+                    android:id="@+id/txt_delivery"
+                    android:layout_width="@dimen/_81sdp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/_13sdp"
+                    android:singleLine="true"
+                    android:background="@drawable/bg_btlr_corner"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/white"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="-2sp"
+                    android:gravity="center_horizontal"
+                    android:text="Delivered"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/rl_image"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_16sdp"
+                        android:textColor="@color/black"
+                        android:letterSpacing="0.01"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/txt_price"
+                        android:lineSpacingExtra="3sp"
+                        android:text="Shyam sweets" />
+                    <TextView
+                        android:id="@+id/txt_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@color/Red"
+                        android:layout_alignParentRight="true"
+                        android:lineSpacingExtra="8sp"
+                        android:gravity="end"
+                        android:text="₹ 2160" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/LGrey"
+                    android:lineSpacingExtra="6sp"
+                    android:text="Lassi, Custard Apple lassi,Pickle, butter and slated lassi" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/_76sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="@color/Red"
+                android:background="@drawable/bg_full_edit_border_red"
+                android:lineSpacingExtra="8sp"
+                android:gravity="center"
+                android:text="Reorder"/>
+
+            <TextView
+                android:layout_width="@dimen/_76sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="@color/Grey"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@drawable/bg_full_edit_border"
+                android:lineSpacingExtra="8sp"
+                android:gravity="center"
+                android:text="Review"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

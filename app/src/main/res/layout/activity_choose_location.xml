@@ -4,93 +4,122 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:focusableInTouchMode="true"
     tools:context=".Activity.ChooseLocationActivity">
 
-    <androidx.core.widget.NestedScrollView
+    <RelativeLayout
+        android:id="@+id/ll_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="?attr/actionBarSize">
 
-        <LinearLayout
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/_40sdp"
+            android:padding="@dimen/_10sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_left_arrow"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtChooseYourLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/ll_toolbar"
+        android:fontFamily="@font/roboto_medium"
+        android:lineSpacingExtra="5sp"
+        android:text="Choose your location"
+        android:textColor="#444444"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_Select_Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtChooseYourLocation"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto_regular"
+        android:lineSpacingExtra="3sp"
+        android:text="Select a location to explore the Yummy food"
+        android:textColor="#444444"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="62dp"
+        app:lottie_autoPlay="true"
+        android:layout_below="@+id/txt_Select_Location"
+        android:visibility="visible"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/location" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/UseCurrentLocationLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_btn"
+            android:backgroundTint="#f8263d">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="100dp"
-                android:src="@drawable/logo_choose_location" />
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
 
-            <TextView
-                android:id="@+id/txtChooseYourLocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/roboto_bold"
-                android:text="Choose your location"
-                android:textColor="@color/black"
-                android:textSize="22sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/roboto_bold"
-                android:text="and start exploring yummy food"
-                android:textColor="@color/grey"
-                android:textSize="12sp" />
-
-            <RelativeLayout
-                android:id="@+id/UseCurrentLocationLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:background="@drawable/bg_btn_location">
-
-                <LinearLayout
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginRight="8dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_pin" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/map_pin"
-                        android:layout_marginRight="8dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Use my current location"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:fontFamily="@font/roboto_medium"
-                        android:text="Use my current location"
-                        android:textColor="@color/white"
-                        android:textSize="13sp" />
+            </LinearLayout>
 
-                </LinearLayout>
+        </RelativeLayout>
 
-            </RelativeLayout>
+        <TextView
+            android:id="@+id/txtSelectManually"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="31dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Want to select Manually?"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/txtSelectManually"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                android:fontFamily="@font/roboto_medium"
-                android:text="Select Manually"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-        </LinearLayout>
-
-    </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
 
 </RelativeLayout>
