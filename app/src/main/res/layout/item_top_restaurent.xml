@@ -1,41 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/_221sdp"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_231sdp"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="@dimen/_10sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
-    <ImageView
+
+    <com.google.android.material.imageview.ShapeableImageView
         android:layout_width="@dimen/_221sdp"
         android:layout_height="@dimen/_147sdp"
         android:scaleType="fitXY"
-        android:src="@drawable/ic_coupne"/>
+        android:layout_marginLeft="@dimen/_10sdp"
+        app:shapeAppearanceOverlay="@style/CornerSize10Percent"
+        android:src="@drawable/ic_food"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/_14sdp"
-        android:text="Awesome food"
-        android:layout_marginTop="@dimen/_7sdp"
-        android:layout_marginLeft="@dimen/_6sdp"
+        android:fontFamily="@font/roboto_regular"
         android:textStyle="bold"
-        android:textColor="@color/black" />
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/black222222"
+        android:lineSpacingExtra="5sp"
+        android:text="Awesome food"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginLeft="@dimen/_15sdp"/>
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:textStyle="normal"
         android:textSize="@dimen/_12sdp"
+        android:textColor="@color/black766a6a"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="2sp"
         android:text="15 Min away"
-        android:layout_marginLeft="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
         android:drawableLeft="@drawable/ic_time"
-        android:drawablePadding="@dimen/_5sdp"
-        android:textStyle="bold"
-        android:textColor="@color/Grey" />
+        android:drawablePadding="@dimen/_2sdp" />
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginLeft="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
         android:orientation="horizontal">
         <ImageView
             android:layout_width="@dimen/_15sdp"
@@ -48,15 +59,15 @@
             android:textSize="@dimen/_11sdp"
             android:text=" 4.3 "
             android:gravity="center"
-            android:background="@drawable/bg_search_home"
+            android:background="@drawable/bg_round_ten_dp"
             android:backgroundTint="@color/Orangeoriginal"
             android:textColor="@color/white"
-            android:layout_marginLeft="@dimen/_10sdp"/>
+            android:layout_marginLeft="@dimen/_5sdp"/>
 
         <ImageView
             android:layout_width="@dimen/_18sdp"
             android:layout_height="@dimen/_18sdp"
-            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_14sdp"
             android:src="@drawable/ic_pure_veg"/>
     </LinearLayout>
 

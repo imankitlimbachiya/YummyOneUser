@@ -4,26 +4,27 @@
     android:layout_width="@dimen/_148sdp"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginLeft="@dimen/_15sdp"
     android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="@dimen/_148sdp"
             android:layout_height="@dimen/_188sdp">
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="@dimen/_148sdp"
                 android:layout_height="@dimen/_188sdp"
+                android:layout_marginLeft="@dimen/_16sdp"
+                app:shapeAppearanceOverlay="@style/CornerSize10Percent"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_coupne"/>
+                android:src="@drawable/ic_food_eating_girl"/>
 
             <ImageView
                 android:id="@+id/img_heart"
-                android:layout_width="@dimen/_10sdp"
-                android:layout_height="@dimen/_11sdp"
+                android:layout_width="@dimen/_11sdp"
+                android:layout_height="@dimen/_9sdp"
                 android:scaleType="fitXY"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_26sdp"
+                android:layout_marginBottom="@dimen/_13sdp"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:src="@drawable/ic_heart"/>
@@ -31,67 +32,85 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textStyle="normal"
+                android:textSize="@dimen/_14sdp"
                 android:textColor="@color/white"
-                android:text="15K"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="3sp"
+                android:text="15k"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="@dimen/_5sdp"
-                android:layout_toRightOf="@+id/img_heart"
-                android:textSize="@dimen/_10sdp"/>
+                android:layout_toRightOf="@+id/img_heart" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textStyle="normal"
+                android:textSize="@dimen/_14sdp"
                 android:textColor="@color/white"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="3sp"
+                android:text="12min"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:text="12min"
-                android:textSize="@dimen/_10sdp"/>
+                android:layout_marginRight="@dimen/_11sdp"
+                android:layout_marginBottom="@dimen/_10sdp" />
 
         </RelativeLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/_14sdp"
-        android:text="Awesome food"
+        android:fontFamily="@font/roboto_regular"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        android:padding="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_5sdp"/>
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:textColor="@color/black222222"
+        android:lineSpacingExtra="5sp"
+        android:text="Awesome food"
+        android:layout_marginTop="@dimen/_16sdp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:paddingLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
         android:orientation="horizontal">
-        <ImageView
+
+        <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="@dimen/_32sdp"
             android:layout_height="@dimen/_32sdp"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/CornerSize10Percent"
             android:src="@drawable/profile_pic"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
                 android:textStyle="bold"
-                android:textSize="14sp"
-                android:textColor="@color/Grey"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/gray7e7e7e"
+                android:lineSpacingExtra="3sp"
                 android:text="Gina Morea" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textSize="12sp"
-                android:textColor="@color/LGrey"
-                android:text="HSR Layout" />
+                android:fontFamily="@font/roboto_regular"
+                android:textStyle="normal"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/graybebdc4"
+                android:lineSpacingExtra="2sp"
+                android:text="HSR Layout"
+                android:layout_marginTop="@dimen/_4sdp"/>
         </LinearLayout>
     </LinearLayout>
 

@@ -7,5 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_112sdp"
         android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_15sdp"
         android:src="@drawable/restaurant_1"/>
 </RelativeLayout>

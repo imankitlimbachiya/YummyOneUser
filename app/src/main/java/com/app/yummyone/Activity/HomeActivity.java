@@ -67,22 +67,22 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
 
         TopRestaurantAdapter  topRestaurantAdapter = new TopRestaurantAdapter(animalNames);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, true);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
         rvtorestaurant.setLayoutManager(mLayoutManager);
         rvtorestaurant.setAdapter(topRestaurantAdapter);
 
         FeaturesVlogsAdapter featuredvlogsAdapter = new FeaturesVlogsAdapter(animalNames);
-        RecyclerView.LayoutManager featuredvlogsLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, true);
+        RecyclerView.LayoutManager featuredvlogsLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
         rvfeaturedvlogs.setLayoutManager(featuredvlogsLayoutManager);
         rvfeaturedvlogs.setAdapter(featuredvlogsAdapter);
 
         CouponAdapter couponAdapter = new CouponAdapter(animalNames);
-        RecyclerView.LayoutManager couponLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, true);
+        RecyclerView.LayoutManager couponLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false);
         rvcoupon.setLayoutManager(couponLayoutManager);
         rvcoupon.setAdapter(couponAdapter);
 
         FeaturedRestaurantsAdapter frAdapter = new FeaturedRestaurantsAdapter(animalNames);
-        RecyclerView.LayoutManager frLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, true);
+        RecyclerView.LayoutManager frLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         rvfeaturedrestaurants.setLayoutManager(frLayoutManager);
         rvfeaturedrestaurants.setAdapter(frAdapter);
 
@@ -130,7 +130,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(ivlog);
                 break;
             case R.id.txt_delivery:
-                txt_delivery.setBackgroundResource(R.drawable.bg_round);
+                txt_delivery.setBackgroundResource(R.drawable.bg_round_fifteen_dp);
                 txt_pickup.setBackgroundResource(0);
                 txt_dine.setBackgroundResource(0);
 
@@ -145,7 +145,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.txt_pickup:
 
                 txt_delivery.setBackgroundResource(0);
-                txt_pickup.setBackgroundResource(R.drawable.bg_round);
+                txt_pickup.setBackgroundResource(R.drawable.bg_round_fifteen_dp);
                 txt_dine.setBackgroundResource(0);
 
                // txt_delivery.getBackground().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
@@ -159,7 +159,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.txt_dine:
                 txt_delivery.setBackgroundResource(0);
                 txt_pickup.setBackgroundResource(0);
-                txt_dine.setBackgroundResource(R.drawable.bg_round);
+                txt_dine.setBackgroundResource(R.drawable.bg_round_fifteen_dp);
 
                // txt_delivery.getBackground().setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
                // txt_pickup.getBackground().setColorFilter(getResources().getColor(R.color.white),PorterDuff.Mode.SRC_ATOP);

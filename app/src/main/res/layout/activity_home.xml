@@ -5,43 +5,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Activity.HomeActivity">
 
     <RelativeLayout
         android:id="@+id/ll_toolbar"
         android:layout_width="match_parent"
+        android:background="@color/f6f6f6"
         android:layout_height="?attr/actionBarSize">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img_location"
-            android:layout_width="@dimen/_40sdp"
-            android:padding="@dimen/_10sdp"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             android:layout_centerVertical="true"
             android:src="@drawable/ic_place"/>
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/txt_location_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="10sp"
+            android:fontFamily="@font/roboto_black"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="6sp"
             android:layout_toRightOf="@+id/img_location"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/txt_location_name"
-                android:layout_width="@dimen/_86sdp"
-                android:layout_height="wrap_content"
-                android:textStyle="normal"
-                android:textSize="12sp"
-                android:layout_marginTop="@dimen/_16sdp"
-                android:textColor="@color/black"
-                android:lineSpacingExtra="6sp"
-                android:text="Delivering to170 Ross Street" />
-        </LinearLayout>
+            android:text="Delivering to \n170 Ross Street" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img_userimage"
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
             android:padding="@dimen/_10sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_12sdp"
             android:layout_alignParentRight="true"
             android:src="@drawable/profile_pic"/>
 
@@ -50,185 +49,199 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/_50sdp"
         android:layout_below="@+id/ll_toolbar">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginRight="@dimen/_10sdp">
+            android:layout_height="match_parent">
 
-            <LinearLayout
-                android:id="@+id/ll_deliveypickup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/txt_delivery"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/_14sdp"
-                    android:text=" Delivery  "
-                    android:textColor="@color/white"
-                    android:padding="@dimen/_5sdp"
-                    android:backgroundTint="@color/black"
-                    android:background="@drawable/bg_round"
-                    android:layout_marginTop="@dimen/_17sdp"/>
+             <LinearLayout
+                 android:orientation="vertical"
+                 android:layout_width="match_parent"
+                 android:background="@drawable/bg_btlr_corner_50"
+                 android:backgroundTint="@color/f6f6f6"
+                 android:padding="@dimen/_20sdp"
+                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/txt_pickup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/_14sdp"
-                    android:text=" Pickup  "
-                    android:textColor="@color/black"
-                    android:padding="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_17sdp"/>
-
-                <TextView
-                    android:id="@+id/txt_dine"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/_14sdp"
-                    android:text=" Dine In  "
-                    android:textColor="@color/black"
-                    android:padding="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_17sdp"/>
-            </LinearLayout>
-
-            <RelativeLayout
-                android:id="@+id/ll_Search"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_20sdp">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_40sdp"
-                    android:layout_toLeftOf="@+id/img_filter"
-                    app:iconifiedByDefault="false"
-                    android:paddingLeft="@dimen/_10sdp"
-                    android:fontFamily="@font/roboto_medium"
-                    android:textSize="12sp"
-                    android:background="@drawable/bg_search_home"
-                    android:hint="Dishes,restaurants or cuisines"
-                    android:layout_marginRight="@dimen/_10sdp"/>
-
-                <ImageView
-                    android:id="@+id/img_filter"
-                    android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:layout_marginRight="@dimen/_10sdp"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_facebook"/>
-            </RelativeLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/_15sdp"
-                android:text="Categories"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:padding="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_20sdp"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="4">
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/_75sdp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_restaurants"/>
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:id="@+id/ll_deliveypickup"
+                        android:layout_width="match_parent"
+                        android:background="@color/f6f6f6"
                         android:layout_height="wrap_content"
-                        android:text="Restaurants"
-                        android:layout_marginTop="@dimen/_4sdp"
-                        android:textSize="12sp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/Grey"/>
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_delivery"
+                            android:layout_width="@dimen/_74sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:textSize="@dimen/_14sdp"
+                            android:text="Delivery"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:backgroundTint="@color/black"
+                            android:background="@drawable/bg_round_fifteen_dp"/>
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/txt_pickup"
+                            android:layout_width="@dimen/_74sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:textSize="@dimen/_14sdp"
+                            android:text="Pickup"
+                            android:textColor="@color/black"
+                            android:gravity="center" />
 
-                <LinearLayout
-                    android:id="@+id/ll_homemade"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/txt_dine"
+                            android:layout_width="@dimen/_74sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:textSize="@dimen/_14sdp"
+                            android:text="Dine In"
+                            android:textColor="@color/black"
+                            android:gravity="center" />
+                    </LinearLayout>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/_75sdp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_homemade"/>
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:id="@+id/ll_Search"
+                        android:background="@color/f6f6f6"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Homemade"
-                        android:layout_marginTop="@dimen/_4sdp"
-                        android:textSize="12sp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/Grey"/>
+                        android:paddingTop="@dimen/_20sdp">
 
-                </LinearLayout>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_toLeftOf="@+id/img_filter"
+                            app:iconifiedByDefault="false"
+                            android:paddingLeft="@dimen/_17sdp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textSize="12sp"
+                            android:background="@drawable/bg_search_home"
+                            android:hint="Dishes,restaurants or cuisines"
+                            android:layout_marginRight="@dimen/_13sdp"/>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
+                        <ImageView
+                            android:id="@+id/img_filter"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_facebook"/>
+                    </RelativeLayout>
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/_75sdp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_fastfood"/>
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="FastFood"
-                        android:layout_marginTop="@dimen/_4sdp"
-                        android:textSize="12sp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/Grey"/>
+                        android:textSize="@dimen/_15sdp"
+                        android:text="Categories"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:background="@color/f6f6f6"
+                        android:layout_marginTop="@dimen/_18sdp"/>
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/_75sdp"
-                        android:layout_gravity="center"
-                        android:padding="@dimen/_10sdp"
-                        android:src="@drawable/ic_grocery"/>
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Grocery"
-                        android:layout_marginTop="@dimen/_4sdp"
-                        android:textSize="12sp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/Grey"/>
+                        android:orientation="horizontal"
+                        android:background="@color/f6f6f6"
+                        android:weightSum="4">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
 
-                </LinearLayout>
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_75sdp"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/_7sdp"
+                                android:src="@drawable/ic_restaurants"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Restaurants"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:textSize="12sp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/gray222121"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_homemade"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_75sdp"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/_7sdp"
+                                android:src="@drawable/ic_homemade"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Homemade"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:textSize="12sp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/gray222121"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_75sdp"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/_7sdp"
+                                android:src="@drawable/ic_fastfood"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FastFood"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:textSize="12sp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/gray222121"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_75sdp"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/ic_grocery"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Grocery"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:textSize="12sp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/gray222121"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
             </LinearLayout>
 
@@ -236,53 +249,75 @@
                 android:id="@+id/rvcoupon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_13sdp"/>
+                android:layout_marginTop="@dimen/_20sdp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_marginTop="@dimen/_13sdp"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20sdp"
                 android:layout_height="wrap_content">
 
                 <ImageView
                     android:layout_width="@dimen/_26sdp"
                     android:layout_height="@dimen/_16sdp"
                     android:src="@drawable/dot_intro_slide_one"/>
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/_11sdp"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="@dimen/_10sdp"
-                    android:text="More Offers"
-                    android:drawablePadding="@dimen/_10sdp"
-                    android:drawableRight="@drawable/ic_right_arrow"
-                    android:textColor="@color/Red"/>
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_11sdp"
+                        android:text="More Offers"
+                        android:letterSpacing="0.02"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/roboto_medium"
+                        android:lineSpacingExtra="2sp"
+                        android:textColor="@color/Red"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_13sdp"
+                        android:layout_height="@dimen/_11sdp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_right_arrow"/>
+                </LinearLayout>
+
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_marginTop="@dimen/_15sdp"
                 android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
                 android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/_15sdp"
-                    android:text="Top Restaurants"
+                    android:fontFamily="@font/roboto_regular"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:padding="@dimen/_5sdp" />
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/black222222"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Top Restaurants" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/_11sdp"
+                    android:layout_width="@dimen/_52sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/gray8e8e8e"
+                    android:letterSpacing="0.02"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center"
+                    android:text="SEE ALL"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="@dimen/_10sdp"
-                    android:padding="@dimen/_5sdp"
-                    android:background="@drawable/bg_search_home"
-                    android:text=" SEE ALL "
-                    android:textColor="@color/Grey"/>
+                    android:background="@drawable/bg_search_home_ten" />
 
             </RelativeLayout>
 
@@ -290,55 +325,68 @@
                 android:id="@+id/rvtorestaurant"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"/>
+                android:layout_marginTop="@dimen/_15sdp"/>
 
 
             <RelativeLayout
-                android:layout_marginTop="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_30sdp"
                 android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20sdp"
                 android:layout_height="wrap_content">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/_15sdp"
-                    android:text="Featured Vlogs"
+                    android:fontFamily="@font/roboto_regular"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:padding="@dimen/_5sdp" />
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/black222222"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Featured Vlogs" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/_11sdp"
+                    android:layout_width="@dimen/_52sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/gray8e8e8e"
+                    android:letterSpacing="0.02"
+                    android:lineSpacingExtra="2sp"
+                    android:gravity="center"
+                    android:text="SEE ALL"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="@dimen/_10sdp"
-                    android:padding="@dimen/_5sdp"
-                    android:background="@drawable/bg_search_home"
-                    android:text=" SEE ALL "
-                    android:textColor="@color/Grey"/>
+                    android:background="@drawable/bg_search_home_ten" />
             </RelativeLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvfeaturedvlogs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"/>
+                android:layout_marginTop="@dimen/_24sdp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/_15sdp"
-                android:text="Featured Restaurants"
+                android:fontFamily="@font/roboto_regular"
                 android:textStyle="bold"
-                android:textColor="@color/black"
-                android:padding="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_13sdp"/>
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black222222"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="3sp"
+                android:text="Featured Restaurants"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvfeaturedrestaurants"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_90sdp"
+                android:layout_marginTop="@dimen/_24sdp"/>
 
         </LinearLayout>
 
@@ -358,7 +406,7 @@
             android:layout_gravity="bottom"
             android:layout_marginBottom="@dimen/_10sdp"
             android:src="@drawable/ic_home_text"
-            android:layout_height="@dimen/_20sdp"/>
+            android:layout_height="@dimen/_44sdp"/>
 
         <ImageView
             android:id="@+id/img_search"
@@ -367,20 +415,20 @@
             android:layout_gravity="bottom"
             android:layout_marginBottom="@dimen/_10sdp"
             android:src="@drawable/ic_search_text"
-            android:layout_height="@dimen/_20sdp"/>
+            android:layout_height="@dimen/_44sdp"/>
 
         <RelativeLayout
             android:layout_width="0dp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_height="@dimen/_92sdp"
             android:layout_weight="1.5">
         <ImageView
             android:id="@+id/img_vlog"
-            android:layout_width="@dimen/_30sdp"
+            android:layout_width="@dimen/_64sdp"
             android:background="@drawable/ic_bottom_bg"
-            android:padding="@dimen/_5sdp"
+            android:padding="@dimen/_10sdp"
             android:layout_centerInParent="true"
             android:src="@drawable/ic_vlog_text"
-            android:layout_height="@dimen/_30sdp"/>
+            android:layout_height="@dimen/_64sdp"/>
         </RelativeLayout>
 
         <ImageView
@@ -390,7 +438,7 @@
             android:layout_gravity="bottom"
             android:layout_marginBottom="@dimen/_10sdp"
             android:src="@drawable/ic_bag_text"
-            android:layout_height="@dimen/_20sdp"/>
+            android:layout_height="@dimen/_44sdp"/>
 
         <ImageView
             android:id="@+id/img_profile"
@@ -399,7 +447,7 @@
             android:layout_gravity="bottom"
             android:layout_marginBottom="@dimen/_10sdp"
             android:src="@drawable/ic_profile_text"
-            android:layout_height="@dimen/_20sdp"/>
+            android:layout_height="@dimen/_44sdp"/>
 
     </LinearLayout>
 

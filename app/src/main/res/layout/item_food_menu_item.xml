@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_7sdp">
+
+        <LinearLayout
+            android:id="@+id/ll_titleprice111"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_toLeftOf="@+id/img_item111"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_21sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:textStyle="normal"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/black222222"
+                android:lineSpacingExtra="3sp"
+                android:text="Spaghetti Bolognaise" />
+            <TextView
+                android:id="@+id/item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_21sdp"
+                android:fontFamily="@font/roboto_regular"
+                android:textStyle="normal"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/black444444"
+                android:lineSpacingExtra="3sp"
+                android:text="$ 15.00"
+                android:layout_marginTop="@dimen/_5sdp"/>
+        </LinearLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_item_image"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            app:shapeAppearanceOverlay="@style/CornerSize10Percent"
+            android:src="@drawable/ic_burger"
+            android:scaleType="fitXY"
+            android:layout_alignParentRight="true"/>
+
+        <View
+            android:id="@+id/view_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@+id/img_item_image"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/graye1e1e1"/>
+    </RelativeLayout>
+
+</RelativeLayout>
